@@ -1,0 +1,120 @@
+ :root {
+  --bg-color: #f0f0f0;
+  --text-color: #111;
+  --accent-color: #4CAF50;
+  --chip-color: #e0e0e0;
+  --dark-bg: #121212;
+  --dark-text: #f0f0f0;
+  --dark-chip: #333;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 30px 10px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+main {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#skillChips {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-chip {
+  background-color: var(--chip-color);
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.skill-chip span {
+  cursor: pointer;
+  color: red;
+}
+
+#analyzeBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#suggestions {
+  margin-top: 20px;
+}
+
+.suggestion-card {
+  background-color: #fff;
+  padding: 15px;
+  border-left: 5px solid var(--accent-color);
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#darkModeToggle {
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #e0e0e0;
+  margin-top: 30px;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark input,
+body.dark .skill-chip,
+body.dark .suggestion-card {
+  background-color: var(--dark-chip);
+  color: var(--dark-text);
+}
+
+body.dark header {
+  background-color: #2e7d32;
+}
